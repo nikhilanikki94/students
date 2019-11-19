@@ -1,0 +1,10 @@
+.item{
+    font-weight: bold;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+label{
+    font-weight: bolder;
+    margin-top: 2%;
+}
