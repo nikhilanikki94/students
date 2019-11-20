@@ -6,7 +6,10 @@ const bodyParser = require('body-parser');
 const mongoose=require('mongoose');
 
 
-mongoose.connect("mongodb://localhost:27017/MyCollegeDb");
+
+
+mongoose.connect("mongodb+srv://Nikhilanikki:Nikhi804@cluster0-he8si.mongodb.net/test?retryWrites=true&w=majority");
+//mongoose.connect("mongodb://localhost:27017/MyCollegeDb");
 var {studentModel}=require('./src/models/studentModel');
 const app = new express();
 
@@ -55,6 +58,6 @@ app.route('/save')
    // console.log(req.body);
 });
 
-app.listen(3020,()=>{
+app.listen(process.env.PORT || 3020,()=>{
     console.log('Listening to Port: '+chalk.green('3020'));
 });
